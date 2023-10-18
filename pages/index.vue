@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { animate, spring } from 'motion'
+import { animate } from 'motion'
 
 const isVisible = ref(false)
 
@@ -19,7 +19,7 @@ const unwatch = watch(isVisible, (isVisible) => {
     animate(
       '.hero-bg',
       { opacity: 1 },
-      { duration: 1, delay: 0.25, easing: spring() }
+      { duration: 0.75, delay: 0.4, easing: 'ease-in' }
     )
     unwatch()
   }
